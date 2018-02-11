@@ -8,8 +8,8 @@
 
 ****
 ## 目录
-* [编写属于你自己的Tensorflow Optimizer](#编写属于你自己的Tensorflow Optimizer)
-* [例子:AMSGrad](#例子实现AMSGrad)
+* [编写属于你自己的Tensorflow Optimizer](#编写属于你自己的tensorflow-optimizer-1)
+* [例子:AMSGrad](#例子实现amsgrad)
 * [相关资料](#相关资料)
 ****
 
