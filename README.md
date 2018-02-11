@@ -45,7 +45,7 @@ from tensorflow.python.training import optimizer
 ### 例子:实现AMSGrad
 强如Adam，也有不足之处。前段时间公布的ICLR2018排名第五的论文《ON THE CONVERGENCE OF ADAM AND BEYOND》，指出了现有的Adam的不足（Adam可能导致不收敛），提出了AMSGrad，通过对Adam的二阶动量的变化进行控制，取得了不错的效果。乘Tensorflow还没有将其变成内置的API，我们赶快动手，自己实现一下～
 
-详细实现见本repository内的AMSGrad.py: [Create your own AMSGrad in tensorflow](/AMSGrad.py)
+详细实现见本repository内的AMSGrad.py(sparse gradient还没太明白，尚未实现，理论上不影响使用): [Create your own AMSGrad in tensorflow](/AMSGrad.py)
 
 具体用法：
 ```python
