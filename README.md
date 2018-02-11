@@ -49,8 +49,12 @@ from tensorflow.python.training import optimizer
 
 具体用法：
 ```python
+import tensorflow as tf
 from AMSGrad import *
+your_loss = ...
 optim = AMSGrad(learning_rate=0.01).minimize(your_loss)
+sess = tf.Session()
+loss, _ = sess.run([your_loss, optim])
 ```
 
 ### 相关资料
