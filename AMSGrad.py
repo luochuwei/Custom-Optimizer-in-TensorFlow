@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Date    : 2018-02-10 23:49:47
+# @Date    : 2018-02-11 00:49:47
 # @Author  : Luo Chuwei
 # @Link    : http://github.com/luochuwei
 # @Usage   : AMSGrad 
