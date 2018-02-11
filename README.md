@@ -8,12 +8,12 @@
 
 ****
 ## 目录
-* [编写属于你自己的Tensorflow-Optimizer](#编写属于你自己的Tensorflow-Optimizer)
-* [例子：AMSGrad](#例子：AMSGrad)
+* [编写属于你自己的Tensorflow_Optimizer](#编写属于你自己的Tensorflow_Optimizer)
+* [例子_AMSGrad](#例子_AMSGrad)
 * [相关资料](#相关资料)
 ****
 
-### 编写属于你自己的Tensorflow-Optimizer
+### 编写属于你自己的Tensorflow_Optimizer
 Tensorflow更新很快，也拥有很多集成好了的各种Network/Loss/Optimizer的API供我们调用，我们也可以很容易地通过Tensorflow实现自己的网络和loss。那么当我们灵光一现，有了自己的optimizer算法的时候，应该如何使用tensorflow实现呢？
 
 关于这个问题，目前为止网上基本没有中文的教程，tensorflow的官网上关于定义我们自己的optimizer的资料也基本没有(可能是大家觉得SGD/Adam就够用了吧:disappointed_relieved:)。
@@ -42,7 +42,7 @@ from tensorflow.python.training import optimizer
 
 接着，我们通过_apply_dense() 和 _apply_sparse() 来实现相应的更新参数的操作，就大功告成了。
 
-### 例子：AMSGrad
+### 例子_AMSGrad
 强如Adam，也有不足之处。前段时间公布的ICLR2018排名第五的论文《ON THE CONVERGENCE OF ADAM AND BEYOND》，指出了现有的Adam的不足（Adam可能导致不收敛），提出了AMSGrad，通过对Adam的二阶动量的变化进行控制，取得了不错的效果。乘Tensorflow还没有将其变成内置的API，我们赶快动手，自己实现一下～
 
 详细实现见:[Create your own AMSGrad in tensorflow](/AMSGrad.py)
