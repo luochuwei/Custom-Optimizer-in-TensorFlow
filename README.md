@@ -15,11 +15,17 @@
 
 ### 编写属于你自己的Tensorflow Optimizer
 Tensorflow更新很快，也拥有很多集成好了的各种Network/Loss/Optimizer的API供我们调用，我们也可以很容易地通过Tensorflow实现自己的网络和loss。那么当我们灵光一现，有了自己的optimizer算法的时候，应该如何使用tensorflow实现呢？
+
 关于这个问题，目前为止网上基本没有中文的教程，tensorflow的官网上关于定义我们自己的optimizer的资料也基本没有(可能是大家觉得SGD/Adam就够用了吧:disappointed_relieved:)。
+
 这里，一个非常直观的方法就是我们先通过tensorflow定义一个普通的GradientDescentOptimizer，然后通过compute_gradients计算出相应的梯度，然后对梯度进行操作，从而完成我们的想法。但是这种方式如何实现类似于Adam这种带momentum的Optimizer呢？
+
 通过搜索Stackoverflow以及阅读tensorflow相关的Optimizer源代码，发现想要实现自己的Optimizer其实很简单。
+
 我们通过定义依赖于原始tensorflow Optimizer类的一个class，然后实现相应的 _create_slots(), _prepare(), _apply_dense(), 和 _apply_sparse()4个函数，就能够实现我们自己的优化器了.
+
 首先，我们需要以下这些modules:
+
 ```
 from tensorflow.python.eager import context
 from tensorflow.python.framework import ops
