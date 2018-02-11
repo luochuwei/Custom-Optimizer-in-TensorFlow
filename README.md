@@ -47,6 +47,12 @@ from tensorflow.python.training import optimizer
 
 详细实现见:[Create your own AMSGrad in tensorflow](/AMSGrad.py)
 
+具体用法：
+```python
+from AMSGrad import *
+optim = AMSGrad(learning_rate=0.01).minimize(your_loss)
+```
+
 ### 相关资料
 1. [Stackoverflow-How to create an optimizer in Tensorflow](https://stackoverflow.com/questions/38431054/how-to-create-an-optimizer-in-tensorflow)
 2. [Custom Optimizer in Tensorflow](https://www.bigdatarepublic.nl/custom-optimizer-in-tensorflow/)
